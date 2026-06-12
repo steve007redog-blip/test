@@ -149,21 +149,6 @@ function autoFillDate() {
 }
 
 /* ============================================================
-   SUPPLIER DROPDOWN
-============================================================ */
-function populateSuppliers() {
-    const select = document.getElementById("supplier");
-    select.innerHTML = "";
-
-    Object.keys(SUPPLIERS).forEach(name => {
-        const opt = document.createElement("option");
-        opt.value = name;
-        opt.textContent = name;
-        select.appendChild(opt);
-    });
-}
-
-/* ============================================================
    GENERATE NEXT ORDER NUMBER
 ============================================================ */
 async function generateNextOrderNumber() {
