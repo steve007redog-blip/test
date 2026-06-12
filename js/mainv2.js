@@ -1,3 +1,17 @@
+// ================================
+// SUPPLIERS + EMAILS (HARDCODED)
+// ================================
+const SUPPLIERS = {
+    "DIC": ["DICNZ.CustomerServices@dic.co.nz"],
+    "DKSH": ["rick.menalda@dksh.com", "Sales.pM.NZ@dksh.com"],
+    "Packaging Products": ["sales@packprod.co.nz"],
+    "Miscellaneous": ["oggiowens@outlook.com"]
+};
+
+const CC_RECIPIENTS = [
+    "iris@lamprint.co.nz",
+    "todd@lamprint.co.nz"
+];
 /* ============================================================
    GLOBALS
 ============================================================ */
