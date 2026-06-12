@@ -45,23 +45,6 @@ let inkData = []; // Loaded from inkcodes.json
 // Codes treated as solvents
 const SOLVENT_CODES = ["Acetol", "Ethyl", "Normal", "Lactanol"];
 
-/* Supplier → Email mapping */
-const SUPPLIERS = {
-    "DIC": ["DICNZ.CustomerServices@dic.co.nz"],
-    "DKSH": [
-        "rick.menalda@dksh.com",
-        "Sales.pM.NZ@dksh.com"
-    ],
-    "Miscellaneous": ["oggiowens@outlook.com"],
-
-    // Optional future suppliers
-    "Huber": ["oggiowens@outlook.com"],
-    "Sun Chemicals": ["oggiowens@outlook.com"],
-    "Flint Group": ["oggiowens@outlook.com"],
-    "Toyo Ink": ["oggiowens@outlook.com"],
-    "Other": ["oggiowens@outlook.com"]
-};
-
 /* ============================================================
    ON PAGE LOAD
 ============================================================ */
@@ -75,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
 async function init() {
     await openDB();
     await loadInkCodes();
-    populateSuppliers();
+    populateSupplierDropdown();
     await loadOrderNumber();
     autoFillDate();
     setupButtons();
