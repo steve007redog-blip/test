@@ -15,6 +15,27 @@ const CC_RECIPIENTS = [
 /* ============================================================
    GLOBALS
 ============================================================ */
+/* ============================================================
+   GLOBALS
+============================================================ */
+
+// your globals here…
+
+// ================================
+// SUPPLIER DROPDOWN FUNCTION
+// ================================
+function populateSupplierDropdown() {
+    const supplierSelect = document.getElementById("supplier");
+    supplierSelect.innerHTML = "";
+
+    Object.keys(SUPPLIERS).forEach(name => {
+        const opt = document.createElement("option");
+        opt.value = name;
+        opt.textContent = name;
+        supplierSelect.appendChild(opt);
+    });
+}
+
 let db = null;
 let isEditing = false;
 let currentOrderNumber = "";
